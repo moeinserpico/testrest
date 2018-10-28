@@ -1,0 +1,44 @@
+{% load widget_tweaks %}
+<div class="row">
+<div class="col-sm-4 ">
+
+  <label>{{form.hazineName.label}}</label>
+
+                           {{form.hazineName| add_class:"form-control" }}
+
+                </div>
+                <div class="col-sm-4">
+
+
+
+                  <label>{{form.meghdar.label}}</label>
+
+                  {{form.meghdar| add_class:"form-control" }}
+                </div>
+                <div class="col-sm-4">
+
+
+                  <label>{{form.timestamp.label}}</label>
+                                                          <div class="input-group date">
+
+
+
+                                                            {% render_field form.timestamp class="form-control rtl-input" %}
+                                                              <span class="input-group-addon">
+                                                                  <i class="fa fa-calendar">
+                                                                  </i>
+                                                              </span>
+                                                          </div>
+
+                </div>
+
+</div>
+<script>
+$('#id_timestamp').pDatepicker({
+                format: 'YYYY-MM-DD',
+                autoClose: true,
+
+                initialValueType: 'gregorian'
+            });
+
+</script>

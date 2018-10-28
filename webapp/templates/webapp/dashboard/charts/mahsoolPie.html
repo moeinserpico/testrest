@@ -1,0 +1,28 @@
+<div class="ibox float-e-margins">
+                       <div class="ibox-title">
+                           <h5>محصولات به تفکیک</h5>
+
+                       </div>
+                       <div class="ibox-content">
+                           <div class="flot-chart">
+                               <div class="flot-chart-pie-content" id="flot-pie-chart"></div>
+                           </div>
+                       </div>
+                   </div>
+
+                   {% load static %}
+
+                   {% block javascript %}
+
+
+                   <!-- Flot -->
+
+                      <script src="{% static 'js/plugins/flot/jquery.flot.js' %}"></script>
+                      <script src="{% static 'js/plugins/flot/jquery.flot.tooltip.min.js' %}"></script>
+                      <script src="{% static 'js/plugins/flot/jquery.flot.resize.js' %}"></script>
+                      <script src="{% static 'js/plugins/flot/jquery.flot.pie.js' %}"></script>
+                      <script src="{% static 'js/plugins/flot/jquery.flot.time.js' %}"></script>
+                      <script src="{% static 'js/project/pieMahsool.js' %}"></script>
+
+
+                   {% endblock %}

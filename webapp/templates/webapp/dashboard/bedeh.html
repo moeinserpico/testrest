@@ -1,0 +1,38 @@
+<div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <span class="label label-info pull-left">روزانه
+            </span>
+            <h5>
+          بدهکاری </h5>
+        </div>
+        <div class="ibox-content" id="Bedeh">
+
+
+        </div>
+    </div>
+    <script>
+    $(function(){
+      var getBedeh= function () {
+
+         $.ajax({
+           url: 'getBedeh/',
+           type:'get',
+           dataType: 'json',
+           success: function (data) {
+                console.log(data);
+               //alert("Company created!");  // <-- This is just a placeholder for now for testing
+               //$("#tbody_company").empty();
+               $("#Bedeh").html(data.html_bedeh_list);
+               //$("#modal-company").modal("hide");
+               //console.log(data.html_order_list);
+
+
+           }
+         });
+         return false;
+       };
+
+
+    getBedeh();
+    });
+    </script>

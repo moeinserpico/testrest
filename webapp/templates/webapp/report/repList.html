@@ -1,0 +1,104 @@
+<!--pip install django-widget-tweaks-->
+{% extends 'webapp/mainTheme.html' %}
+
+ {% block content %}
+
+ <div class="row wrapper border-bottom white-bg page-heading">
+                 <div class="col-lg-8">
+                     <h2 >{{dtTitle}}</h2>
+
+                 </div>
+                 <div class="col-lg-4">
+                     <div class="title-action">
+
+                         <a href="invoice_print.html" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i> چاپ فاکتور </a>
+                     </div>
+                 </div>
+             </div>
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="wrapper wrapper-content animated fadeInRight">
+                     <div class="ibox-content p-xl">
+
+
+                             <div class="table-responsive m-t">
+                                 <table class="table invoice-table">
+                                     <thead>
+                                     <tr>
+                                         <th>میزان موجودی الیاف و نخ</th>
+                                         <th>مقدار</th>
+                                         <th>قیمت واحد</th>
+
+                                         <th>قیمت کل</th>
+                                     </tr>
+                                     </thead>
+                                     <tbody>
+                                       {% include 'webapp/report/partialAmarList.html' %}
+                                     </tbody>
+                                 </table>
+                             </div><!-- /table-responsive -->
+                             <div class="table-responsive m-t">
+                                 <table class="table invoice-table">
+                                     <thead>
+                                     <tr>
+                                         <th>فهرست بستانکاری</th>
+                                         <th>مقدار</th>
+
+                                     </tr>
+                                     </thead>
+                                     <tbody>
+                                       {% include 'webapp/report/partialTalab.html' %}
+                                     </tbody>
+                                 </table>
+                                 <div class="table-responsive m-t">
+                                     <table class="table invoice-table">
+                                         <thead>
+                                         <tr>
+                                             <th>فهرست هزینه ها</th>
+                                             <th>مقدار</th>
+
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                           {% include 'webapp/report/partialHazine.html' %}
+                                         </tbody>
+                                     </table>
+                             </div><!-- /table-responsive -->
+                             <div class="table-responsive m-t">
+                                 <table class="table invoice-table">
+                                     <thead>
+                                     <tr>
+                                         <th>فهرست بدهکاری</th>
+                                         <th>مقدار</th>
+
+                                     </tr>
+                                     </thead>
+                                     <tbody>
+                                       {% include 'webapp/report/partialBedeh.html' %}
+                                     </tbody>
+                                 </table>
+                             </div><!-- /table-responsive -->
+
+                             <table class="table invoice-total">
+                                              {% include 'webapp/report/partialTotal.html' %}
+
+                             </table>
+                             <div class="text-left">
+                                 <button class="btn btn-primary"><i class="fa fa-print"></i> چاپ رسید</button>
+                             </div>
+
+
+                         </div>
+                 </div>
+             </div>
+         </div>
+
+
+
+{% load static %}
+
+{% block javascript %}
+
+  <script src="{% static '/js/project/bedeh.js' %}"></script>
+{% endblock %}
+{% endblock %}

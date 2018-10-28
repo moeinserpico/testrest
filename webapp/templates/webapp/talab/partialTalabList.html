@@ -1,0 +1,32 @@
+{% for c in talabs %}
+
+<tr>
+
+<td>{{c.talabName}}</td>
+ <td>{{c.getMeghdar}}</td>
+
+
+
+
+
+
+
+
+ <td><button type="button"
+              class="btn btn-warning btn-sm js-update-talab"
+              data-url="{% url 'talab_update' c.id %}">
+        <span class="glyphicon glyphicon-pencil"></span> ویرایش
+      </button>
+      <button type="button"
+                   class="btn btn-danger btn-sm js-delete-talab"
+                   data-url="{% url 'talab_delete' c.id %}">
+             <span class="glyphicon glyphicon-trash"></span> حذف
+           </button>
+    </td>
+</tr>
+{% empty %}
+<tr>
+ <td colspan="5" class="text-center bg-warning">هیچ موردی یافت نشد</td>
+</tr>
+
+{% endfor %}

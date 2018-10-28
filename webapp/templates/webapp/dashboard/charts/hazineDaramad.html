@@ -1,0 +1,25 @@
+
+                    <div class="ibox float-e-margins">
+                       <div class="ibox-title">
+                           <h5>
+                               بدهکاری/بستانکاری
+                           </h5>
+                           <div ibox-tools></div>
+                       </div>
+                       <div class="ibox-content">
+                           <div>
+                               <canvas id="lineChart" height="140"></canvas>
+                           </div>
+                       </div>
+                   </div>
+
+
+
+               {% load static %}
+
+               {% block javascript %}
+
+               <!-- ChartJS-->
+
+               <script src="{% static 'js/project/chart1.js' %}"></script>
+               {% endblock %}

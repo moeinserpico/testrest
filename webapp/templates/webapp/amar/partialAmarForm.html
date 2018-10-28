@@ -1,0 +1,35 @@
+{% load widget_tweaks %}
+<div class="row">
+<div class="col-sm-4 ">
+
+
+
+  <label>{{form.Mahsool.label}}</label>
+
+     {% render_field form.Mahsool class="chosen-select chosen-rtl"    %}
+
+
+
+
+
+                </div>
+                <div class="col-sm-4">
+                  <label>{{form.meghdar.label}}</label>
+
+                                           {{form.meghdar| add_class:"form-control" }}
+                </div>
+                <div class="col-sm-4">
+                  <label>{{form.fi.label}}</label>
+
+
+                                           {{form.fi| add_class:"form-control" }}
+                </div>
+</div>
+<script>
+$(function() {
+   $("#id_Mahsool").chosen({
+                width: '100%'
+            });
+});
+
+</script>

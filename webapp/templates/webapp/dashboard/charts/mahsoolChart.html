@@ -1,0 +1,19 @@
+<div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>نمودار ماهیانه محصولات</h5>
+                            <div ibox-tools></div>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="barChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    {% load static %}
+
+                    {% block javascript %}
+
+                    <!-- ChartJS-->
+
+                    <script src="{% static 'js/project/barChart.js' %}"></script>
+                    {% endblock %}

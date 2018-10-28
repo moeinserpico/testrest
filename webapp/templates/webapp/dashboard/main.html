@@ -1,0 +1,72 @@
+{% extends 'webapp/mainTheme.html' %}
+
+ {% block content %}
+ <div class="row">
+   <div class="col-lg-12">
+     {% include "webapp/dashboard/overal.html" %}
+
+   </div>
+ </div>
+ <div class="row">
+                         <div class="col-lg-3">
+                             {% include "webapp/dashboard/alyaf.html" %}
+                         </div>
+                         <div class="col-lg-3">
+                            {% include "webapp/dashboard/talab.html" %}
+                         </div>
+                         <div class="col-lg-3">
+                           {% include "webapp/dashboard/bedeh.html" %}
+                         </div>
+                         <div class="col-lg-3">
+                           {% include "webapp/dashboard/hazine.html" %}
+                         </div>
+
+                     </div>
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+
+
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    {% include "webapp/dashboard/charts/hazineDaramad.html" %}
+
+  </div>
+  <div class="col-lg-6">
+    {% include "webapp/dashboard/charts/mahsoolChart.html" %}
+
+  </div>
+
+
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    {% include "webapp/dashboard/charts/mahsoolPie.html" %}
+
+  </div>
+  <div class="col-lg-6">
+{% include "webapp/dashboard/charts/hazineLineChart.html" %}
+  </div>
+
+
+</div>
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+
+
+  </div>
+
+</div>
+
+
+
+
+ {% endblock %}

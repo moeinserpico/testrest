@@ -1,0 +1,38 @@
+<div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <span class="label label-info pull-left">روزانه
+            </span>
+            <h5>
+           موجودی الیاف </h5>
+        </div>
+        <div class="ibox-content" id="mojudiAlyaf">
+
+
+        </div>
+    </div>
+    <script>
+    $(function(){
+      var getMojudiAlyaf= function () {
+
+         $.ajax({
+           url: 'getMojudiAlyaf/',
+           type:'get',
+           dataType: 'json',
+           success: function (data) {
+
+               //alert("Company created!");  // <-- This is just a placeholder for now for testing
+               //$("#tbody_company").empty();
+               $("#mojudiAlyaf").html(data.html_mojudi_alyaf_list);
+               //$("#modal-company").modal("hide");
+               //console.log(data.html_order_list);
+
+
+           }
+         });
+         return false;
+       };
+
+
+    getMojudiAlyaf();
+    });
+    </script>
